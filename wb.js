@@ -5,7 +5,7 @@ var canvas, ctx, flag = false,
     currY = 0,
     dot_flag = false;
 
-var x = "black",
+var re = 0, gr = 0, bl = 0,
     y = 2;
 
 function init() {
@@ -37,6 +37,7 @@ function init() {
       
     red.addEventListener("keyup", function (event) {
         r = red.value;
+        re = red.value;
         if (!r)
             r = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -44,6 +45,7 @@ function init() {
       
     green.addEventListener("keyup", function (event) {
         g = green.value;
+        gr = green.value;
         if (!g)
             g = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -51,46 +53,18 @@ function init() {
       
     blue.addEventListener("keyup", function (event) {
         b = blue.value;
+        bl = blue.value;
         if (!b)
             b = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
 }
 
-function color(obj) {
-    switch (obj.id) {
-        case "green":
-            x = "green";
-            break;
-        case "blue":
-            x = "blue";
-            break;
-        case "red":
-            x = "red";
-            break;
-        case "yellow":
-            x = "yellow";
-            break;
-        case "orange":
-            x = "orange";
-            break;
-        case "black":
-            x = "black";
-            break;
-        case "white":
-            x = "white";
-            break;
-    }
-    if (x == "white") y = 14;
-    else y = 2;
-
-}
-
 function draw() {
     ctx.beginPath();
     ctx.moveTo(prevX, prevY);
     ctx.lineTo(currX, currY);
-    ctx.strokeStyle = x;
+    ctx.strokeStyle = `rgb(${re}, ${gr}, ${bl})`;
     ctx.lineWidth = y;
     ctx.stroke();
     ctx.closePath();
@@ -122,7 +96,7 @@ function findxy(res, e) {
         dot_flag = true;
         if (dot_flag) {
             ctx.beginPath();
-            ctx.fillStyle = x;
+            ctx.fillStyle = `rgb(${re}, ${gr}, ${bl})`;
             ctx.fillRect(currX, currY, 2, 2);
             ctx.closePath();
             dot_flag = false;
