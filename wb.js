@@ -1,6 +1,7 @@
 const ctx = document.getElementById('canvas').getContext('2d');
 window.addEventListener('resize', resize);
 resize();
+
 let mousePos = {
     x:0,
     y:0
@@ -17,6 +18,7 @@ function resize() {
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height =  window.innerHeight;
 }
+
 function draw(e) {
     if (e.buttons !== 1)
         return;
