@@ -22,6 +22,7 @@ function draw(e) {
         return;
     ctx.beginPath();
     ctx.lineCap = 'round';
+    ctx.strokeStyle = 'black';
     ctx.linewidth = 5;
     ctx.moveTo(mousePos.x, mousePos.y);
     mousePosition(e);
