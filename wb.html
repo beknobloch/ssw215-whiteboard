@@ -14,15 +14,19 @@
 </head>
 
 <body onload="init()">
-    <button onclick="erase()">SCREEN CLEAR</button>
+    
     <canvas id="canvas" width="800" height="400"></canvas>
     <script src="./wb.js"></script>
 
-    <div class="neumorphism-3"></div>
-    <div class="inpt">
-        <input type="number" id="red">
-        <input type="number" id="green">
-        <input type="number" id="blue">
+    <div class="picker">
+        <div class="neumorphism-3"></div>
+        <div class="inpt">
+            <input type="number" id="red">
+            <input type="number" id="green">
+            <input type="number" id="blue">
+        </div> 
+        <button onclick="erase()">SCREEN CLEAR</button>
     </div>
+    
 </body>
 </html>

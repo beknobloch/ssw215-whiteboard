@@ -32,31 +32,31 @@ function init() {
     let green = document.getElementById('green');
     let blue = document.getElementById('blue');
     let box = document.querySelector('div.neumorphism-3');
-      
+
     let r = 0, g = 0, b = 0;
-      
+
     red.addEventListener("keyup", function (event) {
-        r = red.value;
+        r = red.value;
         re = red.value;
-        if (!r)
-            r = 0;
-        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        if (!r)
+            r = 0;
+        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
-      
+
     green.addEventListener("keyup", function (event) {
-        g = green.value;
+        g = green.value;
         gr = green.value;
-        if (!g)
-            g = 0;
-        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        if (!g)
+            g = 0;
+        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
-      
+
     blue.addEventListener("keyup", function (event) {
-        b = blue.value;
+        b = blue.value;
         bl = blue.value;
-        if (!b)
-            b = 0;
-        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        if (!b)
+            b = 0;
+        box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
 }
 
@@ -101,7 +101,7 @@ function findxy(res, e) {
             ctx.closePath();
             dot_flag = false;
         }
-    }
+    } 
     if (res == 'up' || res == "out") {
         flag = false;
     }
