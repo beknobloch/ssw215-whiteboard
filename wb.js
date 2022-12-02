@@ -11,8 +11,6 @@ var x = "black",
 function init() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext("2d");
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
     w = canvas.width;
     h = canvas.height;
 
