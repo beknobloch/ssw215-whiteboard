@@ -17,7 +17,6 @@ button{
 #canvas {
     position: absolute;
     margin: 10%;
-    text-align: center;
     border: 2px solid;
 }
 
