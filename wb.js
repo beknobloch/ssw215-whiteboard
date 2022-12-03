@@ -58,6 +58,8 @@ function init() {
             b = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
+
+    warner = document.getElementById('warning');
 }
 
 function draw() {
