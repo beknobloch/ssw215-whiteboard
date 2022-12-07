@@ -161,12 +161,15 @@ div.input input {
     margin-right: 5%;
     margin-top: 5%;
 }
+.inpt{
+    display: flex;
+    flex-direction: column;
+}
 .inpt input{
     color: white;
     text-align: center;
-
+    margin: 5%;
     font-size: 20px;
-
     height: 40px;
 }
 
