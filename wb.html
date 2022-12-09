@@ -2,30 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0">
-    <title>WHITEBOARD</title>
+    <title>Custom Color Whiteboard</title>
     <link rel="stylesheet" href="./wb.css">
-    <link href=
-    "https://fonts.googleapis.com/css2?family=Itim&display=swap"
-            rel="stylesheet">
-
 </head>
 
 <body onload="init()">
     
+    <!-- Create the canvas with a fixed width and height. Link the JS file for functionality. -->
     <canvas id="canvas" width="800" height="400"></canvas>
     <script src="./wb.js"></script>
 
+    <!-- Create the color picker. -->
     <div class="picker">
         <div class="neumorphism-3"></div>
         <div class="inpt">
+            <!-- Create the color input fields. -->
             <input type="number" id="red" placeholder="0">
             <input type="number" id="green" placeholder="0">
             <input type="number" id="blue" placeholder="0">
         </div> 
         <p id="warning">Please enter only integers between 0 and 255.</p>
+        <!-- Create the screen clear button. -->
         <button onclick="erase()">SCREEN CLEAR</button>
     </div>
     
