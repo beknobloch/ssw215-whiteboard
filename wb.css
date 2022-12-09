@@ -18,6 +18,7 @@ button{
     position: absolute;
     margin: 5%;
     border: 2px solid;
+    cursor: url(assets/pencil-cursor.cur), default;
 }
 
 button:active{
