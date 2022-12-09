@@ -5,8 +5,7 @@ var canvas, ctx, flag = false,
     currY = 0,
     dot_flag = false;
 
-var re = 0, gr = 0, bl = 0,
-    y = 2;
+var y = 2;
 
 function init() {
     canvas = document.getElementById('canvas');
@@ -37,7 +36,6 @@ function init() {
 
     red.addEventListener("keyup", function (event) {
         r = red.value;
-        re = red.value;
         if (!r)
             r = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -45,7 +43,6 @@ function init() {
 
     green.addEventListener("keyup", function (event) {
         g = green.value;
-        gr = green.value;
         if (!g)
             g = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -53,7 +50,6 @@ function init() {
 
     blue.addEventListener("keyup", function (event) {
         b = blue.value;
-        bl = blue.value;
         if (!b)
             b = 0;
         box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -63,6 +59,17 @@ function init() {
 }
 
 function draw() {
+    let re = document.getElementById('red').value;
+    if (!re)
+        re = 0;
+    let gr = document.getElementById('green').value;
+    if (!gr)
+        gr = 0;
+    let bl = document.getElementById('blue').value;
+    if (!bl)
+        bl = 0;
+
+    
     ctx.beginPath();
     ctx.moveTo(prevX, prevY);
     ctx.lineTo(currX, currY);
