@@ -1,11 +1,13 @@
-var canvas, ctx, flag = false,
+let canvas, ctx, flag = false,
     prevX = 0,
     currX = 0,
     prevY = 0,
     currY = 0,
     dot_flag = false;
 
-var y = 2;
+let width = 2;
+
+let globalPenColor = [0, 0, 0]
 
 function init() {
     canvas = document.getElementById('canvas');
@@ -59,6 +61,17 @@ function init() {
 }
 
 function draw() {
+    ctx.beginPath();
+    ctx.globalCompositeOperation = 'source-over'
+    ctx.moveTo(prevX, prevY);
+    ctx.lineTo(currX, currY);
+    ctx.strokeStyle = `rgb(${globalPenColor[0]}, ${globalPenColor[1]}, ${globalPenColor[2]})`;
+    ctx.lineWidth = width;
+    ctx.stroke();
+    ctx.closePath();
+}
+
+function setColor(element) {
     let re = document.getElementById('red').value;
     if (!re)
         re = 0;
@@ -68,19 +81,17 @@ function draw() {
     let bl = document.getElementById('blue').value;
     if (!bl)
         bl = 0;
-
-    
-    ctx.beginPath();
-    ctx.moveTo(prevX, prevY);
-    ctx.lineTo(currX, currY);
-    ctx.strokeStyle = `rgb(${re}, ${gr}, ${bl})`;
-    ctx.lineWidth = y;
-    ctx.stroke();
-    ctx.closePath();
+    if (element == "pen") globalPenColor = [re, gr, bl];
+    else {
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = `rgb(${re}, ${gr}, ${bl})`;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
 }
 
 function erase() {
-    var m = confirm("Are you sure you want to clear?");
+    let m = confirm("Are you sure you want to clear?");
     if (m) {
         ctx.clearRect(0, 0, w, h);
         document.getElementById("canvasimg").style.display = "none";
@@ -89,7 +100,7 @@ function erase() {
 
 function save() {
     document.getElementById("canvasimg").style.border = "2px solid";
-    var dataURL = canvas.toDataURL();
+    let dataURL = canvas.toDataURL();
     document.getElementById("canvasimg").src = dataURL;
     document.getElementById("canvasimg").style.display = "inline";
 }

@@ -23,7 +23,11 @@
         </div> 
         <p id="warning">Please enter only integers between 0 and 255.</p>
         <!-- Create the screen clear button. -->
-        <button onclick="erase()">SCREEN CLEAR</button>
+        <div>
+            <button class="selection pen" onclick="setColor('pen')">SET PEN COLOR</button>
+            <button class="selection board" onclick="setColor('board')">FILL WITH COLOR</button>
+        </div>
+        <button class="clear" onclick="erase()">SCREEN CLEAR</button>
     </div>
     
 </body>

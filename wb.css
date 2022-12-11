@@ -1,4 +1,4 @@
-button{
+button {
     margin-top: 10%;
     top: 5px;
     left: 135px;
@@ -12,6 +12,10 @@ button{
     font: 1.2em 'consolas';
     transition: transform 300ms ease;
     z-index: 2;
+}
+
+.clear {
+    background: rgb(154, 0, 0);
 }
 
 #canvas {
