@@ -9,7 +9,7 @@
 <body onload="init()">
     
     <!-- Create the canvas with a fixed width and height. Link the JS file for functionality. -->
-    <canvas id="canvas" width="800" height="400"></canvas>
+    <canvas id="canvas" width="800" height="500%"></canvas>
     <script src="./wb.js"></script>
 
     <!-- Create the color picker. -->
@@ -23,6 +23,10 @@
         </div> 
         <p id="warning">Please enter only integers between 0 and 255.</p>
         <!-- Create the screen clear button. -->
+        <div style="padding-top:10px">
+            <p id="pencolortext">Pen color:</p>
+            <div class="neumorphism-3" id="penColorDisplay"></div>
+        </div>
         <div>
             <button class="selection pen" onclick="setColor('pen')">SET PEN COLOR</button>
             <button class="selection board" onclick="setColor('board')">FILL WITH COLOR</button>

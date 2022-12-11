@@ -2,7 +2,7 @@ button {
     margin-top: 10%;
     top: 5px;
     left: 135px;
-    padding: 10px 40px;
+    padding: 10px 15px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 15px #303030;
@@ -19,10 +19,10 @@ button {
 }
 
 #canvas {
-    position: absolute;
-    margin: 5%;
+    margin: 2%;
     border: 2px solid;
     cursor: url(assets/pencil-cursor.cur), default;
+    position: fixed;
 }
 
 button:active{
@@ -50,6 +50,15 @@ body {
     margin-bottom: 3%;
     float: right;
     background-color: black;
+}
+
+#penColorDisplay {
+    width: 75px;
+    height: 75px;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    margin-bottom: 0%;
 }
 
 div.input {
@@ -87,7 +96,7 @@ div.input input {
     flex-direction: column;
     float: right;
     align-items: center;
-    margin-right: 5%;
+    margin-right: 2%;
     margin-top: 5%;
 }
 .inpt{
@@ -107,4 +116,13 @@ div.input input {
     font-size: 20px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-top: 10px;
+}
+
+#pencolortext {
+    color: rgb(105, 65, 0);
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 20px;
+    padding-right: 10px;
+    display: inline-block;
 }

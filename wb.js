@@ -72,6 +72,8 @@ function draw() {
 }
 
 function setColor(element) {
+    let display = document.getElementById('penColorDisplay');
+
     let re = document.getElementById('red').value;
     if (!re)
         re = 0;
@@ -81,7 +83,11 @@ function setColor(element) {
     let bl = document.getElementById('blue').value;
     if (!bl)
         bl = 0;
-    if (element == "pen") globalPenColor = [re, gr, bl];
+    if (element == "pen")
+    {
+        globalPenColor = [re, gr, bl];
+        display.style.backgroundColor = `rgb(${re}, ${gr}, ${bl})`;
+    }
     else {
         let canvas = document.getElementById("canvas");
         let ctx = canvas.getContext("2d");
